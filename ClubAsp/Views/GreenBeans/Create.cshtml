@@ -1,0 +1,48 @@
+﻿@model ClubAsp.Models.GreenBean
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>GreenBean</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BinNo" class="control-label"></label>
+                <input asp-for="BinNo" class="form-control" />
+                <span asp-validation-for="BinNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GreenClass" class="control-label"></label>
+                <input asp-for="GreenClass" class="form-control" />
+                <span asp-validation-for="GreenClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LotNumber" class="control-label"></label>
+                <input asp-for="LotNumber" class="form-control" />
+                <span asp-validation-for="LotNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BinLevel" class="control-label"></label>
+                <input asp-for="BinLevel" class="form-control" />
+                <span asp-validation-for="BinLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
